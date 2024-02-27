@@ -30,6 +30,7 @@ public class Singleton {
         // Some code here
     }
 
-
 }
+
+
 
