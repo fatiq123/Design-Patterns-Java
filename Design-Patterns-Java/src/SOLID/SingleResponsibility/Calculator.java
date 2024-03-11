@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Calculator {
 
-    public int add(int a , int b) {
+    public int add(int a, int b) {
         return a + b;
     }
 
@@ -14,15 +14,18 @@ public class Calculator {
     }
 
     public int multiply(int a, int b) {
-        return a*b;
+        return a * b;
     }
 
     public int divide(int a, int b) {
-        return a/b;
+        if (b == 0) {
+            throw new IllegalArgumentException("Divisor cannot be zero");
+        }
+        return a / b;
     }
 
     // sun using arrayList it is dynamic type
-    public int arrayListSum(ArrayList<Integer> array) {
+    public int arrayListSum(List<Integer> array) {
         int total = 0;
         for (int i = 0; i < array.size(); i++) {
             total = total + i;
@@ -45,13 +48,11 @@ public class Calculator {
         Calculator calculator = new Calculator();
 
 
-
-        int[] numbers = {1,2,3,4,5};
+        int[] numbers = {1, 2, 3, 4, 5};
         System.out.println("Sum of simple array: " + calculator.arraySum(numbers));
 
 
-
-        ArrayList<Integer> arrayList = new ArrayList<>();
+        List<Integer> arrayList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             arrayList.add(i);
         }
