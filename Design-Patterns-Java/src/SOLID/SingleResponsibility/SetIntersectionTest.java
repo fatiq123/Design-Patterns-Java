@@ -20,10 +20,12 @@ class SetIntersectionTest {
         Set<Integer> set2 = new HashSet<>(Arrays.asList(2,3,4));
 
         Set<Integer> expected = setIntersection.setIntersection(set1, set2);
-        Set<Integer> actual = new HashSet<>(Arrays.asList(2,3));
+        Set<Integer> actual = new HashSet<>(Arrays.asList(3,2));    // intersection of set1 and set2 is (2,3)
 
 
+        Set<Integer> notEqual = new HashSet<>(Arrays.asList(1,3));
 
         assertEquals(expected,  actual, "Sets should be intersected together");
+        assertNotEquals(expected, notEqual, "Sets should not be intersected together");
     }
 }
