@@ -47,5 +47,14 @@ public class WeatherStation {
         weatherStation.setHumidity(60.0);
 
 
+        int b[] = new int[] {1,2,3,4,5};
+        System.out.println(b);
+
+        for (int i=0; i<b.length; i++) {
+            System.out.println(i);
+        }
+
+
+
     }
 }
